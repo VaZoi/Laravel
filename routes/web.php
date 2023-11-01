@@ -35,3 +35,6 @@ Route::get('/planeten', function () use ($planets) {
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+?>
