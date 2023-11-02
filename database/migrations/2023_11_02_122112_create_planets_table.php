@@ -11,7 +11,7 @@ class CreatePlanetsTable extends Migration
         Schema::create('planets', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->text('description');
+            $table->string('description');
             $table->integer('size_in_km');
             $table->timestamps();
         });
@@ -22,3 +22,4 @@ class CreatePlanetsTable extends Migration
         Schema::dropIfExists('planets');
     }
 }
+
