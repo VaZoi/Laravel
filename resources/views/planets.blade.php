@@ -10,7 +10,8 @@
             <li>
                 <strong>Name:</strong> {{ $planet->name }}<br>
                 <strong>Description:</strong> {{ $planet->description }}<br>
-                <strong>Size (in km):</strong> {{ $planet->size_in_km }}<br><br>
+                <strong>Size (in km):</strong> {{ $planet->size_in_km }}<br>
+                <strong>Solar System:</strong> {{ $planet->solarSystem->name }}<br><br>
             </li>
         @endforeach
     </ul>

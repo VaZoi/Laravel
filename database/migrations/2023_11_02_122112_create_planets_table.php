@@ -13,7 +13,10 @@ class CreatePlanetsTable extends Migration
             $table->string('name');
             $table->string('description');
             $table->integer('size_in_km');
+            $table->unsignedBigInteger('solar_system_id');
             $table->timestamps();
+
+            $table->foreign('solar_system_id')->references('id')->on('solar_systems');
         });
     }
 

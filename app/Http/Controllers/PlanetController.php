@@ -4,12 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Planet;
+use App\Models\SolarSystem;
 
 class PlanetController extends Controller
 {
     public function index()
     {
-        $planets = Planet::all();
+        $planets = Planet::with('solarSystem')->get();
         return view('planets', ['planets' => $planets]);
     }
 
@@ -24,6 +25,5 @@ class PlanetController extends Controller
         return view('planet', ['planet' => $planetInfo]);
     }
 }
-
 
 ?>
