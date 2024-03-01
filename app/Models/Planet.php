@@ -10,6 +10,6 @@ class Planet extends Model
 
     public function solarSystem()
     {
-        return $this->belongsTo(SolarSystem::class);
+        return $this->belongsTo(SolarSystem::class, 'Solar_System_ID');
     }
 }
