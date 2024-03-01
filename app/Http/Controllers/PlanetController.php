@@ -24,13 +24,6 @@ class PlanetController extends Controller
 
         return view('planet', ['planet' => $planetInfo]);
     }
-
-    public function indexSolarSystems()
-    {
-        $solarSystems = SolarSystem::withCount('planets')->get();
-        return view('solarsystems', ['solarSystems' => $solarSystems]);
-    }
-
 }
 
 ?>
