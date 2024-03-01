@@ -12,6 +12,6 @@ class RoleUserController extends Controller
     {
         $usersWithRoles = User::with('roles')->get();
 
-        return view('roles-and-users', ['usersWithRoles' => $usersWithRoles]);
+        return view('roles-users', ['usersWithRoles' => $usersWithRoles]);
     }
 }

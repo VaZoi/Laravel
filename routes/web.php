@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PlanetController;
+use App\Http\Controllers\RoleUserController;
 
 Route::get('/planets', [PlanetController::class, 'index']);
 Route::get('/planets/{planet}', [PlanetController::class, 'show']);
